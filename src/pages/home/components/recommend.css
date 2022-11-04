@@ -35,6 +35,8 @@
   color: var(--blog-primary);
   background-color: var(--blog-bg-light);
   padding: .5rem 1rem;
+  cursor: pointer;
+  transition: all .3s ease;
 }
 .qiandao-btn:hover {
   background: var(--blog-primary-light);
