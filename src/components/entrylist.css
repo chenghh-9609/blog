@@ -1,0 +1,68 @@
+.entrylist {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  cursor: pointer;
+}
+
+.entrylist:hover {
+  background-color: var(--blog-background-light);
+}
+
+.entrylist a:hover {
+  color: var(--blog-primary);
+}
+/* 作者、日期、标签 简介 */
+.entrylist-profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.entrylist-profile > * {
+  display: inline-block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-left: 1px solid var(--blog-border-light);
+}
+.entrylist-profile > *:first-child {
+  border: none;
+  padding-left: 0;
+}
+.entrylist-profile .taglist {
+  display: flex;
+  gap: 1rem;
+}
+.entrylist-profile .taglist li {position: relative;}
+.entrylist-profile .taglist li:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -0.5rem;
+  width: 2px;
+  height: 2px;
+  background-color: var(--blog-text-dark);
+  border-radius: 50%;
+}
+.entrylist-profile .taglist li:last-child::after {
+  width: 0;
+}
+/* 文章简介 */
+.entrylist-content h2 {
+  color: var(--blog-text-dark-hover);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.entrylist-desc {
+  color: var(--blog-text-desc);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.entrylist-extra {
+  border-bottom: 1px solid var(--blog-background);
+}
+.entrylist-extra > * {
+  display: inline-block;
+  padding: 1rem 1.5rem 1rem 0;
+}
+.entrylist-extra i {
+  margin-right: 5px;
+}

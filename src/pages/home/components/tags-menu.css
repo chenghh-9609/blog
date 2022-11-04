@@ -1,0 +1,66 @@
+.tags-wrapper {
+  width: 100%;
+  background-color: var(--blog-bg-light);
+  color: var(--blog-text-dark);
+  font-size: 1rem;
+}
+
+/* 标签 */
+
+.tags {
+  display: flex;
+  width: var(--content-width);
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.tags ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tag-item {
+  display: inline-block;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.tag-manage-btn {
+  background-color: inherit;
+  color:inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+
+.tag-item.active, 
+.tag-item:hover, 
+.tag-manage-btn:hover {
+  color: var(--blog-primary);
+}
+
+/* 标签管理 */
+.tag-popover-box {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 400px;
+  padding: 1.5rem;
+  border-radius: .2rem;
+  background-color: var(--blog-bg-light);
+  box-shadow: 0 0 .5rem rgba(0, 0, 0, .2);
+}
+
+.tag-popover-box > * {
+  display: inline-block;
+  border-radius: 1rem;
+  padding: .5rem;
+  background-color: var(--blog-background);
+}
+
+.tag-popover-box > *:hover {
+  color: var(--blog-primary);
+}

@@ -1,0 +1,16 @@
+.btn-group {
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid var(--blog-background);
+}
+.btn-group > * {
+  color: var(--blog-text-dark);
+  padding-left:1rem;
+  padding-right: 1rem;
+  border-left: 1px solid var(--blog-background);
+  background-color: var(--blog-bg-light);
+  cursor: pointer;
+}
+.btn-group > *:hover {color: var(--blog-primary);}
+.btn-group > *:first-child {border: none;}

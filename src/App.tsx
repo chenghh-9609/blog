@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import routes from './router';
+import { RouteWithSubRoutes } from './router/common';
+import { RouteInterface } from './types/router';
+import Header from './components/Header';
+import { Menu } from './types/user';
+import { mapRouteToMenu } from './utils/router-utils';
+import { Redirect } from 'react-router-dom';
+const menu: Menu[] = mapRouteToMenu(routes);
+const route = routes.map((route: RouteInterface, i: number) =>
+  RouteWithSubRoutes(route, i)
+);
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header userInfo="lunary" menu={menu}></Header>
+        <Switch>
+          <Redirect path="/" to="/home" exact></Redirect>
+          {route}
+        </Switch>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

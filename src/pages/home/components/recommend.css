@@ -1,0 +1,87 @@
+.center {
+  width: var(--content-width);
+  display: flex;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.left {
+  flex: 1;
+  background-color: var(--blog-bg-light);
+}
+
+.right {
+  width: 240px;
+}
+
+.right > * {
+  background-color: var(--blog-bg-light);
+  margin-bottom: 2rem;
+}
+/* 签到样式 */
+.qiandao {
+  padding: 1.5rem;
+  text-align: center;
+}
+.qiandao-title span {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.qiandao-btn {
+  border-radius: 2rem;
+  font-size: 1rem;
+  border: 1px solid var(--blog-primary);
+  color: var(--blog-primary);
+  background-color: var(--blog-bg-light);
+  padding: .5rem 1rem;
+}
+.qiandao-btn:hover {
+  background: var(--blog-primary-light);
+}
+
+.qiandao-text{
+  text-align: center;
+  padding-top: 1rem; 
+  padding-bottom: 1rem; 
+}
+
+/* 作者榜 */
+.authors-title {
+  padding: 1rem;
+  border-bottom: 1px solid var(--blog-background);
+}
+
+.author-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.author-list-item-img {
+  border-radius: 50%;
+  border: 1px solid var(--blog-background);
+  width: 4rem;
+  height: 4rem;
+}
+.author-list-item-desc {
+  margin-left: .5rem;
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.author-list-item-desc h4 {
+  font-weight: 500;
+}
+.author-list-item:hover {
+  background-color: var(--blog-background-light);
+}
+.authors-total {
+  padding: 1rem;
+  border-top: 1px solid var(--blog-background);
+  text-align: center;
+  color: var(--blog-primary);
+  cursor: pointer;
+}
